@@ -1,6 +1,6 @@
 const output = document.getElementById("output");
 const details = document.getElementById("details");
-const btn = document.getElementById("btn");
+const chose = document.getElementById("chose");
 
 const url = "https://restcountries.eu/rest/v2/all";
 const countryList = fetch("https://restcountries.eu/rest/v2/all");
@@ -36,9 +36,14 @@ const outputData = (detail) => {
   console.log(detail.target.value);
   let obj = myData[detail.target.value];
   console.log(obj);
+
   let flag = `<img src="${obj.flag}">`;
-  let name = `<h1>  ${obj.name}</h1>`;
-  details.innerHTML = `${flag} </br> ${name} </br>  `;
+  let name = `<h1> Name:  ${obj.name} </h1>`;
+  let population = `<p><span>Population:</span> ${obj.population}`;
+
+  details.innerHTML = `${flag}  ${name}   ${population}`;
+
+  chose.innerHTML = `You have selected <span>${obj.name}</span> `;
 };
 
 fetchCountries();

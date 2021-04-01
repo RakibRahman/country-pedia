@@ -1,0 +1,65 @@
+body {
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-color: black;
+}
+
+#title {
+  font-size: 5rem;
+  background: #8f5ef1;
+  background: linear-gradient(to right, #8f5ef1 66%, #ff52dc 100%, #ff96b6 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#chose {
+  color: white;
+}
+
+#chose span {
+  color: #8f5ef1;
+}
+
+#output {
+  margin-bottom: 10px;
+}
+
+#details {
+  width: 500px;
+  background-color: salmon;
+}
+
+#details > * {
+  margin: 0;
+}
+
+#details h1 {
+  font: size 3rem;
+}
+
+#details img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  animation: fading 1s ease-in-out 0s 1;
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+#details p {
+  font-size: 2rem;
+}
+
+#details p span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
