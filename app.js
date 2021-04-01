@@ -38,10 +38,18 @@ const outputData = (detail) => {
   console.log(obj);
 
   let flag = `<img src="${obj.flag}">`;
-  let name = `<h1> Name:  ${obj.name} </h1>`;
+  let name = `<h1>   ${obj.name} </h1>`;
   let population = `<p><span>Population:</span> ${obj.population}`;
+  let currency = `<p><span>Currency: </span>${obj.currencies[0].name} - ${obj.currencies[0].symbol} </p>`;
 
-  details.innerHTML = `${flag}  ${name}   ${population}`;
+  let natives = `<p><span>Natives:</span> ${obj.demonym}`;
+  let region = `<p><span>Region:</span> ${obj.region}`;
+  let timeZone = `<p><span>Timezone:</span> ${obj.timezones[0]}`;
+  let capital = `<p><span>Capital:</span> ${obj.capital}`;
+  let languages = `<p><span>Languages:</span> ${obj.languages[0].name} - ${obj.languages[0].nativeName}`;
+
+  details.innerHTML = `${flag}  ${name} ${region} ${timeZone} ${capital} ${natives} ${languages}   ${population}  ${currency} `;
+  details.style.paddingBottom = "10px";
 
   chose.innerHTML = `You have selected <span>${obj.name}</span> `;
 };
